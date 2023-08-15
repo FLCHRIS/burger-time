@@ -1,0 +1,39 @@
+.header {
+  &__top {
+    padding: 1.5rem 2rem;
+    background-color: $White;
+    position: relative;
+    // backdrop-filter: blur(.1rem);
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    &-effect {
+      position: absolute;
+      background-color: $Orange;
+      width: 14rem;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 0 10rem 10rem 0;
+    }
+    &__container {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 4rem;
+      color: $Black;
+      &__shop {
+        font-size: $Icon;
+        cursor: pointer;
+        transition-property: transform color;
+        transition-duration: .3s;
+        &:hover {
+          color: $Orange;
+        }
+        &:active {
+          transform: translateY(.3rem);
+        }
+      }
+    }
+  }
+}
