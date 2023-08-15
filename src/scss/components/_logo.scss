@@ -1,0 +1,12 @@
+.logo {
+  font-size: $Logo;
+  width: 8rem;
+  text-align: center;
+  color: $Black;
+  line-height: 1;
+  font-weight: 800;
+  text-transform: uppercase;
+  span {
+    color: $White;
+  }
+}
