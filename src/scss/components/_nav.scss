@@ -1,0 +1,47 @@
+.nav {
+  position: absolute;
+  background-color: $White;
+  bottom: -34rem;
+  left: 0;
+  width: 100%;
+  padding: 3rem 2rem;
+  z-index: 5;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  transition: clip-path .6s;
+  &__list {
+    display: grid;
+    gap: 2rem;
+    &__item {
+      &__cta {
+        font-size: 1.6rem;
+        color: $Black;
+        width: max-content;
+        padding: .8rem 3rem .8rem 0;
+        position: relative;
+        z-index: 10;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -2rem;
+          width: 0%;
+          height: 100%;
+          background-color: $Orange;
+          z-index: -1;
+          border-radius: 0 10rem 10rem 0;
+          transition: width .3s;
+        }
+      }
+      &__cta-active {
+        font-weight: 500;
+        color: $White;
+        &::before {
+          width: 120%;
+        }
+      }
+    }
+  }
+}
+.nav-show {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
