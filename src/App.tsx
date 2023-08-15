@@ -1,9 +1,12 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import { Router } from './router/Router'
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-    </div>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   )
 }
 
