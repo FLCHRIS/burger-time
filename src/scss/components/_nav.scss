@@ -1,10 +1,11 @@
 .nav {
-  position: absolute;
+  position: fixed;
   background-color: $White;
-  bottom: -34rem;
+  top: 0;
   left: 0;
   width: 100%;
-  padding: 3rem 2rem;
+  height: 100%;
+  padding: 10rem 2rem 0;
   z-index: 5;
   clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
   transition: clip-path .6s;
@@ -44,4 +45,57 @@
 }
 .nav-show {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+@media screen and (min-width: 800px) {
+  .nav {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    z-index: 5;
+    clip-path: none;
+    background-color: transparent;
+    &__list {
+      grid-auto-flow: column;
+      &__item {
+        &__cta {
+          color: $Black;
+          width: auto;
+          padding: 0 .5rem;
+          &::before {
+            top: auto;
+            bottom:  0;
+            left: 0;
+            width: 0;
+            height: .2rem;
+            border-radius: .1rem;
+          }
+        }
+        &__cta-active {
+          color: $Orange;
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .nav-show {
+    clip-path: none;
+  }
+}
+
+@media screen and (min-width: 1275px) {
+  .nav {
+    &__list {
+      gap: 3rem;
+      &__item {
+        &__cta {
+          font-size: 1.8rem;
+          padding: 0 .7rem;
+        }
+      }
+    }
+  }
 }
