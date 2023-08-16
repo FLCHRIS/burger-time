@@ -1,9 +1,8 @@
 .header {
-  &__top {
+  &__container {
     padding: 1.5rem 2rem;
-    background-color: $White;
+    background-color: rgba($White, .5);
     position: relative;
-    // backdrop-filter: blur(.1rem);
     display: grid;
     grid-auto-flow: column;
     justify-content: space-between;
@@ -17,13 +16,13 @@
       left: 0;
       border-radius: 0 10rem 10rem 0;
     }
-    &__container {
+    &__buttons {
       display: grid;
       grid-auto-flow: column;
       gap: 4rem;
       color: $Black;
       &__shop {
-        font-size: $Icon;
+        font-size: 3rem;
         cursor: pointer;
         transition-property: transform color;
         transition-duration: .3s;
@@ -32,6 +31,37 @@
         }
         &:active {
           transform: translateY(.3rem);
+        }
+      }
+      &__burger {
+        z-index: 10;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .header {
+    &__container {
+      &__buttons {
+        &__burger {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .header {
+    &__container {
+      padding: 2.5rem 4rem;
+      &-effect {
+        width: 19rem;
+      }
+      &__buttons {
+        &__shop {
+          font-size: 3.5rem;
         }
       }
     }
