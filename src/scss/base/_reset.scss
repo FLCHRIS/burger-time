@@ -134,3 +134,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: $Gray-light;
 }
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+}
