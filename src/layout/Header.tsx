@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
 import { BiCart } from 'react-icons/bi'
 import { Pivot } from 'hamburger-react'
 import { Logo } from '../components/Logo'
@@ -10,41 +9,22 @@ export const Header: React.FC = () => {
 
   return (
     <header className='header'>
-      <div className='header__top'>
-        <motion.div
-          initial={{
-            translateX: -90
-          }}
-          animate={{
-            translateX: 0
-          }}
-          transition={{
-            duration: 1
-          }}
-          className='header__top-effect'
+      <div className='header__container'>
+        <div
+          className='header__container-effect'
         />
         <Logo classes='header__logo logo' />
         <Nav show={menu} />
-        <motion.div
-          initial={{
-            translateY: -60
-          }}
-          animate={{
-            translateY: 0
-          }}
-          transition={{
-            duration: 1,
-            delay: 0.3
-          }}
-          className='header__top__container'
+        <div
+          className='header__container__buttons'
         >
-          <button className='header__top__container__shop'>
+          <button className='header__container__buttons__shop' aria-label='Show cart'>
             <BiCart aria-hidden='true' />
           </button>
-          <div className='header__top__container__burger'>
+          <div className='header__container__buttons__burger'>
             <Pivot toggle={setMenu} toggled={menu} />
           </div>
-        </motion.div>
+        </div>
       </div>
     </header>
   )
