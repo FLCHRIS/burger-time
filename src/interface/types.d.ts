@@ -25,5 +25,3 @@ export interface IUserContext {
   cart: ICart
   addCart: (product: IProductCart) => void
 }
-
-export type UserContextType = IUserContext | null
