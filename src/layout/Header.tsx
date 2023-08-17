@@ -14,7 +14,7 @@ export const Header: React.FC = () => {
           className='header__container-effect'
         />
         <Logo classes='header__logo logo' />
-        <Nav show={menu} />
+        <Nav show={menu} setMenu={setMenu} />
         <div
           className='header__container__buttons'
         >
