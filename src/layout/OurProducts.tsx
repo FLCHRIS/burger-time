@@ -1,5 +1,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Toaster } from 'react-hot-toast'
 import { Pagination } from 'swiper/modules'
 import { ALL } from '../data/data'
 import 'swiper/css'
@@ -38,6 +39,10 @@ export const OurProducts: React.FC = () => {
             </SwiperSlide>
           ))
         }
+        <Toaster
+          position="top-right"
+          reverseOrder={false}
+        />
       </Swiper>
     </section>
   )
