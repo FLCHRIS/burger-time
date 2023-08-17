@@ -6,7 +6,7 @@
   width: 100%;
   height: 100%;
   padding: 10rem 2rem 0;
-  z-index: 5;
+  z-index: 10;
   clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
   transition: clip-path .6s;
   &__list {
@@ -42,6 +42,12 @@
       }
     }
   }
+  &__button {
+    color: $Black;
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+  }
 }
 .nav-show {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -62,23 +68,33 @@
         &__cta {
           color: $Black;
           width: auto;
+          transition: color .3s;
           padding: 0 .5rem;
+          &:hover {
+            color: $Orange;
+          }
           &::before {
             top: auto;
             bottom:  0;
             left: 0;
-            width: 0;
+            width: 100%;
             height: .2rem;
             border-radius: .1rem;
+            transition: clip-path .3s;
+            clip-path: circle(0% at 50% 50%);
           }
         }
         &__cta-active {
           color: $Orange;
           &::before {
             width: 100%;
+            clip-path: circle(70.7% at 50% 50%);
           }
         }
       }
+    }
+    &__button {
+      display: none;
     }
   }
   .nav-show {
