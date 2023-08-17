@@ -1,8 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { Pivot } from 'hamburger-react'
 
 interface INav {
   show: boolean
+  setMenu: (show: React.SetStateAction<boolean>) => void
 }
 
 interface ILink {
@@ -33,7 +35,7 @@ const links: ILink[] = [
   }
 ]
 
-export const Nav: React.FC<INav> = ({ show }) => {
+export const Nav: React.FC<INav> = ({ show, setMenu }) => {
   return (
     <nav className={show ? 'nav nav-show' : 'nav'}>
       <ul className='nav__list'>
@@ -45,6 +47,9 @@ export const Nav: React.FC<INav> = ({ show }) => {
           ))
         }
       </ul>
+      <div className='nav__button'>
+        <Pivot toggle={setMenu} toggled={show} />
+      </div>
     </nav>
   )
 }
