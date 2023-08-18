@@ -19,6 +19,7 @@
     &__buttons {
       display: grid;
       grid-auto-flow: column;
+      align-items: center;
       gap: 4rem;
       color: $Black;
       &__shop {
@@ -34,7 +35,7 @@
         }
       }
       &__burger {
-        z-index: 5;
+        z-index: 1;
       }
     }
   }
