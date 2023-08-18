@@ -15,13 +15,7 @@ export interface IProductCart extends IProduct {
   quantity: number
 }
 
-export interface ICart {
-  total: number
-  subtotal: number
-  products: IProductCart[]
-}
-
 export interface IUserContext {
-  cart: ICart
+  cart: IProductCart
   addCart: (product: IProductCart) => void
 }
