@@ -31,8 +31,13 @@ export const UserProvider: React.FC<IUserProvider> = ({ children }) => {
     }
   }
 
+  const deleteProduct = (id: number): void => {
+    const newCart = cart.filter((cartItem) => (cartItem.id !== id))
+    setCart(newCart)
+  }
+
   return (
-    <UserContext.Provider value={{ cart, addCart }} >
+    <UserContext.Provider value={{ cart, addCart, deleteProduct }} >
       {children}
     </UserContext.Provider>
   )
