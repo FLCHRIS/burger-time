@@ -1,0 +1,83 @@
+.cart {
+  padding: 4rem 2rem;
+  &__grid {
+    display: grid;
+    gap: 6rem;
+    &__items {
+      display: grid;
+      gap: 3rem;
+    }
+    &__info {
+      background-color: $White;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 5px 5px 10px 0px rgba($Black, 0.15);
+      &__title {
+        font-weight: 800;
+        font-size: 2rem;
+        padding: 1rem 0;
+        color: $Black;
+        border-bottom: .1rem solid $Gray;
+      }
+      &__container {
+        display: grid;
+        grid-auto-flow: row;
+        gap: 1rem;
+        margin: 2rem 0;
+        &__div {
+          display: grid;
+          grid-auto-flow: column;
+          justify-content: space-between;
+          align-items: center;
+          &-name {
+            font-size: 1.6rem;
+            color: $Black;
+          }
+          &-price {
+            font-weight: 600;
+            font-size: 1.6rem;
+            color: $Black;
+          }
+        }
+      }
+      &__div {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
+        align-items: center;
+        border-top: .1rem solid $Gray;
+        padding: 2rem 0 3rem;
+        &-name {
+          font-size: 1.6rem;
+          color: $Black;
+        }
+        &-price {
+          color: $Black;
+          font-size: 1.6rem;
+          font-weight: 600;
+        }
+      }
+      &__button {
+        background-color: $Orange;
+        width: 100%;
+        padding: 1.1rem;
+        font-size: 1.8rem;
+        color: $White;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: .5rem;
+        border: .2rem solid $Orange;
+        transition-property: background-color color transform;
+        transition-duration: .3s;
+        cursor: pointer;
+        &:hover {
+          background-color: $White;
+          color: $Orange;
+        }
+        &:active {
+          transform: translateY(.2rem);
+        }
+      }
+    }
+  }
+}
