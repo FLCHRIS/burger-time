@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { BiCart } from 'react-icons/bi'
 import { Pivot } from 'hamburger-react'
 import { Logo } from '../components/Logo'
@@ -18,9 +19,9 @@ export const Header: React.FC = () => {
         <div
           className='header__container__buttons'
         >
-          <button className='header__container__buttons__shop' aria-label='Show cart'>
+          <Link to='/cart' className='header__container__buttons__shop' aria-label='Show cart'>
             <BiCart aria-hidden='true' />
-          </button>
+          </Link>
           <div className='header__container__buttons__burger'>
             <Pivot toggle={setMenu} toggled={menu} />
           </div>
