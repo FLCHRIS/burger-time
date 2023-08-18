@@ -16,6 +16,7 @@ export interface IProductCart extends IProduct {
 }
 
 export interface IUserContext {
-  cart: IProductCart
+  cart: IProductCart[]
   addCart: (product: IProductCart) => void
+  deleteProduct: (id: number) => void
 }
