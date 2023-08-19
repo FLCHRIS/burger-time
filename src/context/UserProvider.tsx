@@ -13,21 +13,11 @@ export const UserProvider: React.FC<IUserProvider> = ({ children }) => {
     const added = cart.find((value) => (value.id === product.id))
 
     if (added === undefined) {
-      console.log('No existe y lo agrego')
       setCart(
         [...cart, product]
       )
     } else {
-      const newCart = cart.map(item => {
-        if (item.id === product.id) {
-          return {
-            ...item,
-            quantity: item.quantity + 1
-          }
-        }
-        return item
-      })
-      setCart(newCart)
+      addQuantity(product.id)
     }
   }
 
@@ -36,8 +26,34 @@ export const UserProvider: React.FC<IUserProvider> = ({ children }) => {
     setCart(newCart)
   }
 
+  const addQuantity = (id: number): void => {
+    const newCart = cart.map(item => {
+      if (item.id === id) {
+        return {
+          ...item,
+          quantity: item.quantity + 1
+        }
+      }
+      return item
+    })
+    setCart(newCart)
+  }
+
+  const removeQuantity = (id: number): void => {
+    const newCart = cart.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          quantity: item.quantity - 1
+        }
+      }
+      return item
+    })
+    setCart(newCart)
+  }
+
   return (
-    <UserContext.Provider value={{ cart, addCart, deleteProduct }} >
+    <UserContext.Provider value={{ cart, addCart, deleteProduct, removeQuantity, addQuantity }} >
       {children}
     </UserContext.Provider>
   )
