@@ -1,7 +1,9 @@
 # [**BURGER TIME!** :hamburger:]()
 
 <div align='center'>
-  ![Preview website](./public/screenshot.png)
+
+![Preview website](./public/screenshot.png)
+
 <div>
 
 This project was created to demonstrate my knowledge of the **TypeScript** programming language. It is a small restaurant food ordering app, where you can order burgers, drinks, salads, desserts, and breakfasts.
