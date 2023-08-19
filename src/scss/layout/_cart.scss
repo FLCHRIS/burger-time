@@ -15,6 +15,9 @@
           margin-top: 4rem;
         }
         &-img {
+          width: 100%;
+          max-width: 45rem;
+          margin: 0 auto;
           animation-name: emptyCart;
           animation-duration: 2s;
           animation-iteration-count: infinite;
@@ -44,6 +47,9 @@
       }
     }
     &__info {
+      width: 100%;
+      max-width: 50rem;
+      margin: 0 auto;
       background-color: $White;
       padding: 2rem;
       border-radius: 1.5rem;
@@ -117,6 +123,74 @@
     }
   }
 }
+
+@media screen and (min-width: 800px) {
+  .cart {
+    &__grid {
+      grid-template-columns: 1fr 1fr;
+      align-items: flex-start;
+      gap: 4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .cart {
+    padding: 2.5rem 4rem 4rem;
+    &__grid {
+      gap: 5rem;
+      &__items {
+        gap: 3.5rem;
+        &__empty {
+          &-title {
+            font-size: 2.4rem;
+            margin-top: 5rem;
+          }
+          &-img {
+            max-width: 30rem;
+          }
+          &-link {
+            font-size: 1.8rem;
+          }
+        }
+      }
+      &__info {
+        padding: 3rem;
+        &__title {
+          font-weight: 800;
+          font-size: 2.5rem;
+          padding: 1.5rem 0;
+        }
+        &__container {
+          gap: 1.5rem;
+          margin: 2.5rem 0;
+          &__div {
+            &-name {
+              font-size: 1.8rem;
+            }
+            &-price {
+              font-size: 1.8rem;
+            }
+          }
+        }
+        &__div {
+          padding: 2.5rem 0 3.5rem;
+          &-name {
+            font-size: 1.8rem;
+          }
+          &-price {
+            font-size: 1.8rem;
+          }
+        }
+        &__button {
+          padding: 1.3rem;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
 
 @keyframes emptyCart {
   from {
