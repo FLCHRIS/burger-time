@@ -19,4 +19,6 @@ export interface IUserContext {
   cart: IProductCart[]
   addCart: (product: IProductCart) => void
   deleteProduct: (id: number) => void
+  removeQuantity: (id: number) => void
+  addQuantity: (id: number) => void
 }
