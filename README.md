@@ -47,4 +47,4 @@ Some of my platforms... :smiling_face_with_three_hearts:
 - [GitHub](https://github.com/FLCHRIS)
 - [Website](https://christianfl.netlify.app/)
 
-**HAPPY CODDING!!** :upside_down_face: :v:
+**HAPPY CODING!!** :upside_down_face: :v:
