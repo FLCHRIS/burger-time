@@ -8,6 +8,9 @@
   grid-template-rows: 1fr;
   gap: 1rem;
   position: relative;
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
   &__trash {
     position: absolute;
     top: 1rem;
@@ -81,6 +84,44 @@
         font-size: 2rem;
         font-weight: 600;
         color: $Black;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .item {
+    padding: 2rem;
+    gap: 1.5rem;
+    max-width: 50rem;
+    &__trash {
+      font-size: 2.2rem;
+      height: 3.5rem;
+      width: 3.5rem;
+    }
+    &__data {
+      &__name {
+        font-size: 2.5rem;
+      }
+      &__description {
+        font-size: 1.8rem;
+      }
+      &__grid {
+        margin-top: 3rem;
+        &__quantity {
+          gap: 1.5rem;
+          span {
+            font-size: 1.8rem;
+          }
+          button {
+            img {
+              width: 2.2rem;
+            }
+          }
+        }
+        &__price {
+          font-size: 2.2rem;
+        }
       }
     }
   }
