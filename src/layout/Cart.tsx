@@ -14,7 +14,7 @@ interface ICartInfo {
 
 export const Cart: React.FC = () => {
   const [cartInfo, setCartInfo] = useState<ICartInfo>({ total: 0, subtotal: 0, shippingCost: 0 })
-  const { cart } = useContext(UserContext) as IUserContext
+  const { cart, cleanCart } = useContext(UserContext) as IUserContext
 
   let shippingCost = 30
 
@@ -99,7 +99,7 @@ export const Cart: React.FC = () => {
               $ {cartInfo.total}
             </span>
           </div>
-          <button className='cart__grid__info__button'>Checkout</button>
+          <button className='cart__grid__info__button' onClick={() => { cleanCart() } }>Checkout</button>
         </div>
       </div>
       <Toaster
