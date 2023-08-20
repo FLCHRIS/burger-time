@@ -33,20 +33,6 @@
   }
 }
 
-.active {
-  .type {
-    background-color: $Orange;
-    &__div {
-      background-color: $White;
-    }
-    &__name {
-      color: $White;
-    }
-  }
-}
-
-
-
 @media screen and (min-width: 1000px) {
   .type {
     width: 12rem;
