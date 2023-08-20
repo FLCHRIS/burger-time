@@ -28,7 +28,7 @@ export const Card: React.FC<IProduct> = ({ id, image, name, price, information }
       <Atropos
         shadow={false}
       >
-        <img src={image} alt={name} role='presentation' className='card__img' />
+        <img src={image} alt={name} className='card__img' />
       </Atropos>
       <h3 className='card__name'>{name}</h3>
       <p className='card__info'>{information}</p>
