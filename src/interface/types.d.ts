@@ -21,4 +21,7 @@ export interface IUserContext {
   deleteProduct: (id: number) => void
   removeQuantity: (id: number) => void
   addQuantity: (id: number) => void
+  cleanCart: () => void
 }
+
+export type ProductType = 'Burger' | 'Salad' | 'Soda' | 'Dessert' | 'Breakfast'
