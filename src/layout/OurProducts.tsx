@@ -1,8 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Toaster } from 'react-hot-toast'
 import { Pagination } from 'swiper/modules'
-import { ALL } from '../data/data'
+import { OURPRODUCTS } from '../data/data'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { Card } from '../components/Card'
@@ -33,16 +32,12 @@ export const OurProducts: React.FC = () => {
         className="ourProducts__swiper"
       >
         {
-          ALL.map((product) => (
+          OURPRODUCTS.map((product) => (
             <SwiperSlide key={product.id}>
               <Card id={product.id} name={product.name} image={product.image} price={product.price} information={product.information} />
             </SwiperSlide>
           ))
         }
-        <Toaster
-          position="top-right"
-          reverseOrder={false}
-        />
       </Swiper>
     </section>
   )
