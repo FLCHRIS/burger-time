@@ -9,6 +9,10 @@ interface IUserProvider {
 export const UserProvider: React.FC<IUserProvider> = ({ children }) => {
   const [cart, setCart] = useState<IProductCart[]>([])
 
+  const cleanCart = (): void => {
+    setCart([])
+  }
+
   const addCart = (product: IProductCart): void => {
     const added = cart.find((value) => (value.id === product.id))
 
@@ -53,7 +57,7 @@ export const UserProvider: React.FC<IUserProvider> = ({ children }) => {
   }
 
   return (
-    <UserContext.Provider value={{ cart, addCart, deleteProduct, removeQuantity, addQuantity }} >
+    <UserContext.Provider value={{ cart, addCart, deleteProduct, removeQuantity, addQuantity, cleanCart }} >
       {children}
     </UserContext.Provider>
   )
