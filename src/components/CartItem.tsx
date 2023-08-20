@@ -34,7 +34,7 @@ export const CartItem: React.FC<IProductCart> = ({ id, image, information, name,
       <Atropos
         shadow={false}
       >
-        <img src={image} alt={name} className='item__img' role='presentation' />
+        <img src={image} alt={name} className='item__img' />
       </Atropos>
       <div className='item__data'>
         <h3 className='item__data__name'>
