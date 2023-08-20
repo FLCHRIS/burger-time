@@ -2,17 +2,19 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Cart } from '../layout/Cart'
 import { Layout } from '../layout/Layout'
+import { Temporal } from '../layout/Temporal'
 import { Home } from '../pages/Home'
+import { Menu } from '../pages/Menu'
 
 export const Router: React.FC = () => {
   return (
     <Routes>
       <Route path='/' element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path='menu' element={<h1>Menu</h1>} />
-        <Route path='service' element={<h1>Services</h1>} />
-        <Route path='about' element={<h1>About Us</h1>} />
-        <Route path='contact' element={<h1>Contact</h1>} />
+        <Route path='menu' element={<Menu />} />
+        <Route path='service' element={<Temporal />} />
+        <Route path='about' element={<Temporal />} />
+        <Route path='contact' element={<Temporal />} />
         <Route path='cart' element={<Cart />} />
       </Route>
     </Routes>
