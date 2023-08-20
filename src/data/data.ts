@@ -182,6 +182,149 @@ export const SODA: IProduct[] = [
 
 export const ALL: IProduct[] = [
   {
+    id: 1,
+    name: 'Chickenburger',
+    image: burger1,
+    price: 15.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 2,
+    name: 'Crunchy Guacamole',
+    image: burger2,
+    price: 25.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 3,
+    name: 'Cheeseburger',
+    image: burger3,
+    price: 20.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 4,
+    name: 'Burger Jr',
+    image: burger4,
+    price: 27.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 5,
+    name: 'Double burger',
+    image: burger5,
+    price: 30.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 6,
+    name: 'Double veggie burger',
+    image: burger6,
+    price: 17.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 7,
+    name: 'BBQ Burger',
+    image: burger7,
+    price: 32.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 8,
+    name: 'Bacon burger',
+    image: burger8,
+    price: 25.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 9,
+    name: 'Big burger with bacon',
+    image: burger9,
+    price: 40.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 10,
+    name: 'BBQ Bacon Burger',
+    image: burger10,
+    price: 30.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 11,
+    name: 'Simple breakfast',
+    image: breakfast1,
+    price: 13.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 12,
+    name: 'Full breakfast',
+    image: breakfast2,
+    price: 25.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 13,
+    name: 'Nutella filled cone',
+    image: dessert1,
+    price: 5.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 14,
+    name: 'Chocolate Brownies',
+    image: dessert2,
+    price: 7.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 15,
+    name: 'Milk shake',
+    image: dessert3,
+    price: 3.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 16,
+    name: 'Chocolate pie',
+    image: dessert4,
+    price: 10.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 17,
+    name: 'Salad',
+    image: salad1,
+    price: 8.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 18,
+    name: 'Orange juice',
+    image: soda1,
+    price: 3.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 19,
+    name: 'Epura',
+    image: soda2,
+    price: 1.00,
+    information: 'Lorem ipsum dolor'
+  },
+  {
+    id: 20,
+    name: 'American coffee',
+    image: soda3,
+    price: 5.00,
+    information: 'Lorem ipsum dolor'
+  }
+]
+
+export const OURPRODUCTS: IProduct[] = [
+  {
     id: 11,
     name: 'Simple breakfast',
     image: breakfast1,
