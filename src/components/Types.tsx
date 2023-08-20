@@ -15,7 +15,7 @@ export const Types: React.FC<ITypes> = ({ image, name, setType }) => {
   return (
     <button className='type' onClick={handleClick} >
       <span className='type__div'>
-        <img src={image} alt={name} className='type__div__image'/>
+        <img src={image} alt={'Icon' + name} className='type__div__image'/>
       </span>
       <span className='type__name'>{name}</span>
     </button>
