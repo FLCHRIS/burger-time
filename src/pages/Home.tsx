@@ -1,8 +1,8 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 import burger from '../assets/burger/burger5.png'
 import Atropos from 'atropos/react'
 import { OurProducts } from '../layout/OurProducts'
+import { Menu } from './Menu'
 
 export const Home: React.FC = () => {
   return (
@@ -12,12 +12,12 @@ export const Home: React.FC = () => {
           <h1 className='home__info__title'>
             The <span>Fastest Food</span>, For <span>Instant Hunger</span>
           </h1>
-          <motion.p className='home__info__paragraph'>
+          <p className='home__info__paragraph'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nam delectus sed, vel quaerat, libero nesciunt debitis, architecto repudiandae accusamus aut exercitationem nisi non doloribus! Temporibus officia architecto reiciendis blanditiis.
-          </motion.p>
-          <motion.a href='#' className='home__info__cta'>
+          </p>
+          <a href='#' className='home__info__cta'>
             Order Now
-          </motion.a>
+          </a>
         </div>
         <div className='home__image'>
           <Atropos
@@ -29,6 +29,7 @@ export const Home: React.FC = () => {
         </div>
       </div>
       <OurProducts />
+      <Menu />
     </>
   )
 }
