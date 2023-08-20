@@ -4,6 +4,7 @@ import { BiCart } from 'react-icons/bi'
 import { Pivot } from 'hamburger-react'
 import { Logo } from '../components/Logo'
 import { Nav } from '../components/Nav'
+import { Toaster } from 'react-hot-toast'
 
 export const Header: React.FC = () => {
   const [menu, setMenu] = useState<boolean>(false)
@@ -26,6 +27,10 @@ export const Header: React.FC = () => {
             <Pivot toggle={setMenu} toggled={menu} />
           </div>
         </div>
+        <Toaster
+          position="top-right"
+          reverseOrder={false}
+        />
       </div>
     </header>
   )
