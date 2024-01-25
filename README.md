@@ -45,6 +45,6 @@ Some of my platforms... :smiling_face_with_three_hearts:
 
 - [Frontend Mentor | Christian's profile](https://www.frontendmentor.io/profile/FLCHRIS)
 - [GitHub](https://github.com/FLCHRIS)
-- [Website](https://christianfl.netlify.app/)
+- [Website](https://fkhris-ts.netlify.app/)
 
 **HAPPY CODING!!** :upside_down_face: :v:
